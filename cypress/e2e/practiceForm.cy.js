@@ -6,10 +6,8 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   return false;
 });
 
-/// <reference types="cypress" />
-
-describe('Formulário DemoQA', () => {
-  it('Preenche e faz upload de arquivo', () => {
+describe('Preenchimento de Formulário', () => {
+  it('Submeter Formulário com Dados Válidos', () => {
     cy.visit('https://demoqa.com/automation-practice-form');
 
     cy.get('#firstName').type('Maria');
@@ -18,7 +16,7 @@ describe('Formulário DemoQA', () => {
     cy.get('input[name="gender"][value="Female"]').check({force: true});
     cy.get('#userNumber').type('6825277156');
 
-    // Data de nascimento
+    // Date of Birth
     cy.get('#dateOfBirthInput').click();
     cy.get('.react-datepicker__year-select').select('1986');
     cy.get('.react-datepicker__month-select').select('September');

@@ -5,15 +5,15 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   return false;
 });
 
-describe('DemoQA Sortable - Ordem Crescente', () => {
+describe('Ordenação de Lista', () => {
   beforeEach(() => {
     cy.visit('https://demoqa.com/sortable');
   });
 
-  it('Organiza lista em ordem crescente', () => {
+  it('Ordenar Lista em Ordem Crescente', () => {
     cy.get('#demo-tab-list').click();
 
-    // Primeiro, vamos desordenar a lista movendo o último item para o topo
+    // desordenar a lista movendo o último item para o topo
     cy.get('#demo-tabpane-list .list-group-item').then((items) => {
       const dataTransfer = new DataTransfer();
       
@@ -27,7 +27,7 @@ describe('DemoQA Sortable - Ordem Crescente', () => {
         .trigger('drop', { dataTransfer })
         .trigger('dragend');
 
-      // Agora sim, vamos ordenar
+      // ordenar
       cy.get('#demo-tabpane-list .list-group-item').then((items) => {
         const textos = [...items].map((el) => el.innerText);
         const ordemEsperada = ['One', 'Two', 'Three', 'Four', 'Five', 'Six'];

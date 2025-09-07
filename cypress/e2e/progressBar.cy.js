@@ -5,12 +5,12 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   return false;
 });
 
-describe('Teste Progress Bar', () => {
+describe('Controle de Barra de Progresso', () => {
   beforeEach(() => {
     cy.visit('https://demoqa.com/progress-bar');
   });
 
-  it('Deve parar antes de 25%', () => {
+  it('Iniciar e Parar Progresso', () => {
     cy.get('#startStopButton').click(); // inicia
     cy.get('#progressBar')
         .invoke('text')
@@ -23,7 +23,7 @@ describe('Teste Progress Bar', () => {
     cy.get('#startStopButton').click(); // parar
   });
 
-   it('Deve completar até 100% e resetar', () => {
+   it('Completar e Resetar Progresso', () => {
     // Inicia
     cy.get('#startStopButton').click();
 

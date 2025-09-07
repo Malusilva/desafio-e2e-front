@@ -1,0 +1,28 @@
+{
+  "name": "desafio-e2e-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malusilva/desafio-e2e-front.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malusilva/desafio-e2e-front/issues"
+  },
+  "homepage": "https://github.com/Malusilva/desafio-e2e-front#readme",
+  "dependencies": {
+    "cypress": "^15.1.0"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8",
+    "cypress-real-events": "^1.15.0",
+    "cypress-xpath": "^2.0.1"
+  }
+}
